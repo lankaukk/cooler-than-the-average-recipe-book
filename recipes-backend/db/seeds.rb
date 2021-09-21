@@ -6,7 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-recipe = Recipe.create(name: "Tacos", description: "eat!", date: Date.today)
+Ingredient.destroy_all
+Recipe.destroy_all
 
-ingredient = Ingredient.create(name: "tomato", recipe_id: 1, group: "vegetables")
+recipe1 = Recipe.create(name: "tacos", description: "eat this", date: Date.today)
+
+ingredient = Ingredient.create(name: "tomato", recipe_id: recipe1.id, group: "vegetables")
+
+# should not save because group is invalid
+ingredient2 = Ingredient.create(name: "corn", recipe_id: recipe1.id, group: "v")
+
+ingredient3 = Ingredient.create(name: "cilantro", recipe_id: recipe1.id, group: "vegetables")
+
+ingredient4 = Ingredient.create(name: "chicken", recipe_id: recipe1.id, group: "protein")
+
+# recipe1.ingredients = [ingredient, ingredient2]
 

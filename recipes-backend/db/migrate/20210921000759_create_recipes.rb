@@ -3,6 +3,7 @@ class CreateRecipes < ActiveRecord::Migration[6.1]
     create_table :recipes do |t|
       t.string :name
       t.string :description
+      t.string :ingredients
       t.datetime :date
 
       t.timestamps
