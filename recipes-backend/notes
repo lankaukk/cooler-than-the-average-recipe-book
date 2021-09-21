@@ -1,0 +1,7 @@
+Recipe
+has_many :ingredients
+    :name - string, :description - string, :date - dateTime
+
+Ingredient
+belongs_to :recipe
+    :recipe_id - integer, :name - string, :group - string,
