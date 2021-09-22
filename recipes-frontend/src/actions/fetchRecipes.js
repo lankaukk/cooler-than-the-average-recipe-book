@@ -1,9 +1,13 @@
 export function fetchRecipes() {
-
-    fetch('http://localhost:3000/api/v1/recipes')
-    .then(response => response.json())
-    .then(data => console.log(data))
-
+console.log("inside fetchRecipes")
+    return (dispatch) => {
+        fetch('http://localhost:3000/api/v1/recipes')
+            .then(response => response.json())
+            .then(recipeData => dispatch({
+                type: 'FETCH_RECIPES',
+                payload: recipeData
+            }))
+    }
 }
 
 // something like this will actually be used

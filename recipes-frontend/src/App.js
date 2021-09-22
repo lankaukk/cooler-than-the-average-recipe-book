@@ -1,20 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { fetchRecipes } from './actions/fetchRecipes';
+import RecipesContainer from './containers/RecipesContainer';
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchRecipes()
-  }
+  // componentDidMount() {
+  //   this.props.fetchRecipes()
+  // }
 
   render() {
     return (
       <div className="App">
         App
+        <RecipesContainer/>
       </div>
     );
   }
 }
 
-export default connect(null, {fetchRecipes})(App);
+export default App;
