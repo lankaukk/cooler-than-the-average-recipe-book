@@ -1,4 +1,4 @@
-class API::V1::IngredientsController < ApplicationController
+class Api::V1::IngredientsController < ApplicationController
     before_action :set_recipe
 
     def index
@@ -14,7 +14,7 @@ class API::V1::IngredientsController < ApplicationController
 
     def create
         @ingredient =  @recipe.ingredients.new(ingredient_params)
-        # if the ingredient is added to the recipe's ingredient's array? save theingredient
+        # if the ingredient is added to the recipe's ingredient's array? save the ingredient
         if @recipe.add_ingredient(@ingredient)
             @ingredient.save
             render json: @ingredient
