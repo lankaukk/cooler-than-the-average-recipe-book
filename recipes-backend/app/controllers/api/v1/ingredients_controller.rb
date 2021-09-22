@@ -2,6 +2,13 @@ class Api::V1::IngredientsController < ApplicationController
     before_action :set_recipe
 
     def index
+        # if i want an all ingredients show page
+        # if @recipe
+        #     @ingredients = @recipe.ingredients
+        # else
+        #     @ingredients = Ingredient.all
+        # end
+
         @ingredients = @recipe.ingredients
         render json: @ingredients
     end

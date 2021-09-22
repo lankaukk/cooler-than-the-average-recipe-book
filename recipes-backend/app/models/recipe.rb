@@ -6,4 +6,8 @@ class Recipe < ApplicationRecord
         self.ingredients = self.ingredients + ingredient
         self.save
     end
+
+    def date
+        attributes['date'].strftime("%b %d, %Y")
+      end
 end
