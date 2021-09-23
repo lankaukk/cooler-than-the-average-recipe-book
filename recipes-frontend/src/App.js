@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        App
+        <h1>Recipe Book App</h1>
         <RecipesContainer/>
       </div>
     );

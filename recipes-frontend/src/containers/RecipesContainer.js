@@ -14,8 +14,7 @@ class RecipesContainer extends React.Component {
     render(){
         return(
             <div>
-                Recipes Container
-                <RecipeInput/>
+                <RecipeInput/><br></br>
                 <RecipesList recipes={this.props.recipes}/>
             </div>
         )    
