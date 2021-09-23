@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import { fetchRecipes } from '../actions/fetchRecipes';
 import RecipeInput from '../components/RecipeInput'
@@ -12,16 +12,27 @@ class RecipesContainer extends React.Component {
     componentDidMount() {
         this.props.fetchRecipes()
     }
-
+    
     render(){
+        console.log(this.props.recipes, "hi")
+        
         return(
             <div>
+            <Switch>
                 <Route path='/recipes/new' component={RecipeInput}/>
-                <Route path='/recipes/:id' render={(routerProps) => <RecipeShow {...routerProps} recipes={this.props.recipes} />} />
-                <Route exact path='/recipes' render={(routerProps) => <RecipesList {...routerProps} recipes={this.props.recipes} />} />
+
+                <Route path='/recipes/:id' render={(routerProps) => 
+                    <RecipeShow {...routerProps} recipes={this.props.recipes} />} 
+                />
                 
+                <Route path='/recipes' render={(routerProps) => 
+                    <RecipesList {...routerProps} recipes={this.props.recipes} />} 
+                />
+            </Switch> 
             </div>
-        )    
+        )
+        
+        
     }
 }
 

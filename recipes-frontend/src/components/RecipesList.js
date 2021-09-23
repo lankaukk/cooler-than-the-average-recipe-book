@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route, Link} from 'react-router-dom';
 import RecipeShow from './RecipeShow'
 
 const RecipesList = (props) =>  {
@@ -7,13 +8,11 @@ const RecipesList = (props) =>  {
         <div>
             <br></br>
             Recipes!
-            <ul>
+            <br></br>
             {props.recipes.map(recipe => 
-                <div key={recipe.id}> 
-                    <RecipeShow recipe={recipe}/>
-                </div>
-                )}
-            </ul>
+                <li key={recipe.id}> 
+                    <Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link> 
+                </li>)}
         </div>
     )
 
