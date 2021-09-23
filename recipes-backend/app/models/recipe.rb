@@ -7,7 +7,7 @@ class Recipe < ApplicationRecord
         self.save
     end
 
-    # def date
-    #     attributes['date'].strftime("%b %d, %Y")
-    #   end
+    def formatted
+        attributes['created_at'].strftime("%b %d, %Y")
+    end
 end

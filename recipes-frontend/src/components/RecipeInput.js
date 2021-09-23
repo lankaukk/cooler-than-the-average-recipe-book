@@ -38,6 +38,8 @@ class RecipeInput extends React.Component {
                     <input type="text" name="description" placeholder="Description" value={this.state.description} onChange={this.handleChange}></input>
                     <br></br>
 
+
+
                     <input type="submit"></input>
                 </form>
             </div>
