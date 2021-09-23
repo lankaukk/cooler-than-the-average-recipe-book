@@ -18,6 +18,10 @@ class RecipeInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addRecipe(this.state)
+        this.setState({
+            name: '',
+            description: ''
+        })
     }
 
     render() {
