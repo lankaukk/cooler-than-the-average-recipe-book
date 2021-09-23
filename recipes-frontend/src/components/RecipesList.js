@@ -1,4 +1,5 @@
 import React from 'react'
+import RecipeShow from './RecipeShow'
 
 const RecipesList = (props) =>  {
 
@@ -8,11 +9,9 @@ const RecipesList = (props) =>  {
             Recipes!
             <ul>
             {props.recipes.map(recipe => 
-                <li key={recipe.id}> 
-                    <h2>{recipe.name}</h2>
-                    <h3>{recipe.description}</h3> 
-                    <p>Posted on {recipe.date}</p>
-                </li>
+                <div key={recipe.id}> 
+                    <RecipeShow recipe={recipe}/>
+                </div>
                 )}
             </ul>
         </div>
