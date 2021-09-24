@@ -7,8 +7,8 @@ const IngredientsList = (props) => {
             Ingredients:
             <br></br>
             {props.ingredients.map(ingredient => 
-                <li key={ingredient.id}> 
-                    {ingredient.name}
+                <li className={ingredient.group} key={ingredient.id} > 
+                    {ingredient.name} 
                 </li>)}
             <br></br>
         </div>

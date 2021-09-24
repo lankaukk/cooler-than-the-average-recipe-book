@@ -1,0 +1,56 @@
+body {
+    background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+li {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 1%;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+.dairy {
+    color: rgb(8, 91, 199);
+}
+
+.fruits {
+    color: rgb(206, 4, 121);
+}
+
+.vegetables {
+    color: rgb(47, 88, 6);
+}
+
+.grains {
+ color: rgb(116, 111, 47);
+}
+
+.protein {
+    color: sienna;
+}
+
+.fats {
+    color: slateblue;
+}
+
+.seasoning {
+    color: sandybrown;
+}
+
+.condiments {
+    color:rgb(116, 111, 47)
+}
+
+.other {
+    color: slategray;
+}
