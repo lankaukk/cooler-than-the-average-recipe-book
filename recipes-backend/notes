@@ -5,3 +5,7 @@ has_many :ingredients
 Ingredient
 belongs_to :recipe
     :recipe_id - integer, :name - string, :group - string,
+
+
+
+"connected IngredientInput component to the addIngredient ion, updated the ingredients array in the reducer and rendered new ingredients to DOM"

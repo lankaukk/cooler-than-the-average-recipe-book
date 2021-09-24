@@ -30,8 +30,13 @@ class Api::V1::IngredientsController < ApplicationController
         end
     end 
 
-    def destroy_all
-        
+    def destroy
+        @ingredient = Ingredient.find(params["id"])
+        @recipe = Recipe.find(@ingredient.recipe_id)
+        @ingredient.destroy
+        render json: @recipe
+
+        # binding.pry
     end
 
     private 
