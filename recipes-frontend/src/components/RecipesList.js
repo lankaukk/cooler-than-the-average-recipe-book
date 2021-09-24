@@ -1,6 +1,5 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom';
-import RecipeShow from './RecipeShow'
+import { Link } from 'react-router-dom';
 
 const RecipesList = (props) =>  {
 
