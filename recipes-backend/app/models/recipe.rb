@@ -3,7 +3,7 @@ class Recipe < ApplicationRecord
     validates :name, :description, presence: true
 
     def add_ingredient(ingredient)
-        self.ingredients = self.ingredients + ingredient
+        self.ingredients.push(ingredient)
         self.save
     end
 

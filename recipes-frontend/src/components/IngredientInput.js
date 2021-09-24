@@ -1,19 +1,40 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import { addIngredient } from '../actions/addIngredient';
 
 class IngredientInput extends React.Component {
+
+    state = {
+        name: '',
+        group: 'none'
+    }
+
+    // this is needed bc we have a controlled form
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addIngredient(this.state, this.props.recipe.id)
+        this.setState({
+            name: '',
+            group: 'none'
+        })
+    }
 
     render(){
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                 
                 <label>Add Ingredient: </label>
-                <input type="text" placeholder="Ingredient Name" ></input>
+                <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Ingredient Name" ></input>
                 
-                {/* <input type="text"  ></input> */}
-                <select placeholder="Group" >   
-                    <option value="none" selected disabled hidden>
+                <select name="group" value={this.state.group} onChange={this.handleChange}>   
+                    <option value="none" disabled >
                         Category
                     </option>        
                     <option value="dairy">dairy</option>
@@ -36,4 +57,4 @@ class IngredientInput extends React.Component {
     }
 }
 
-export default connect(null)(IngredientInput)
+export default connect(null, {addIngredient})(IngredientInput)

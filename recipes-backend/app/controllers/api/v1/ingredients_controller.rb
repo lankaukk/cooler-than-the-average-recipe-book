@@ -24,7 +24,7 @@ class Api::V1::IngredientsController < ApplicationController
         # if the ingredient is added to the recipe's ingredient's array? save the ingredient
         if @recipe.add_ingredient(@ingredient)
             @ingredient.save
-            render json: @ingredient
+            render json: @recipe
         else
             render json: {error: "Error creating ingredient"}
         end

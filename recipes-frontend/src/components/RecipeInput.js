@@ -48,5 +48,5 @@ class RecipeInput extends React.Component {
 }
 
 
-// using {addRecipe} is an alternative to mapDispatch to props that we can use bc  of Thunk
+// using {addRecipe} is an alternative to mapDispatch to props that we can use bc of Thunk
 export default connect(null, {addRecipe})(RecipeInput)

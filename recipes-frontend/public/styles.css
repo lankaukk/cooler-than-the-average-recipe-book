@@ -48,7 +48,8 @@ a:hover {
 }
 
 .condiments {
-    color:rgb(116, 111, 47)
+    color: rgb(185, 109, 42);
+    -webkit-text-stroke: .5px sienna;
 }
 
 .other {
