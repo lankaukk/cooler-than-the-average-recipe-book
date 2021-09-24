@@ -1,6 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { deleteIngredient } from '../actions/deleteIngredient'
 
 const IngredientsList = (props) => {
+
+    
+    const handleDelete = (ingredient) => {
+        props.deleteIngredient(ingredient.id, ingredient.recipe_id)
+      }
 
     return (
         <div>
@@ -8,7 +15,9 @@ const IngredientsList = (props) => {
             <br></br>
             {props.ingredients.map(ingredient => 
                 <li className={ingredient.group} key={ingredient.id} > 
-                    {ingredient.name} 
+                    {ingredient.name  } 
+
+                    <button onClick={() => handleDelete(ingredient)}>&times;</button>
                 </li>)}
             <br></br>
         </div>
@@ -16,4 +25,4 @@ const IngredientsList = (props) => {
 
 }
 
-export default IngredientsList
+export default connect(null, {deleteIngredient})(IngredientsList)

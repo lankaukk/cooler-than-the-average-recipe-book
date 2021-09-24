@@ -1,5 +1,7 @@
 import React from 'react';
 import RecipesContainer from './containers/RecipesContainer';
+import NavBar from './containers/NavBar';
+
 
 class App extends React.Component {
 
@@ -10,6 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <NavBar/>
         <h1>Recipe Book</h1>
         <RecipesContainer/>
       </div>

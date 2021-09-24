@@ -11,7 +11,6 @@ const RecipeShow = (props) => {
     //let recipe = props.recipes[props.match.params.id - 1]
     let recipe = props.recipes.filter(recipe => recipe.id == props.match.params.id)[0]
     
-
     return (
         <div>
             {recipe ? null : <Redirect to='/recipes'/>}
