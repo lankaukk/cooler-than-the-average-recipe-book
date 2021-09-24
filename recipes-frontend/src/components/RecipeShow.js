@@ -1,6 +1,7 @@
 // functional component!
 import React from 'react';
 import { Redirect } from 'react-router';
+import RecipeEdit from './RecipeEdit';
 
 import IngredientsContainer from '../containers/IngredientsContainer';
 
@@ -20,6 +21,7 @@ const RecipeShow = (props) => {
             {recipe ? recipe.created_at : null}
             <br></br><br></br>
             <IngredientsContainer recipe={recipe}/>
+            <RecipeEdit recipe={recipe}/>
         </div>
     )
 }
