@@ -18,8 +18,11 @@ class RecipesContainer extends React.Component {
         
         return(
             <div>
+                
             <Switch>
+
                 <Route path='/recipes/new' component={RecipeInput}/>
+                
 
                 <Route path='/recipes/:id' render={(routerProps) => 
                     <RecipeShow {...routerProps} recipes={this.props.recipes} />} 

@@ -28,7 +28,8 @@ class RecipeEdit extends React.Component {
     render() {
         return (
             <div>
-                <h3>Add A New Recipe:</h3>
+                <br></br>
+                <h4>Edit this Recipe:</h4>
                 <form onSubmit={this.handleSubmit}>
 
                     <label>Recipe Name: </label>
