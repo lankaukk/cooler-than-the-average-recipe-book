@@ -1,5 +1,5 @@
 export function fetchRecipes() {
-console.log("inside fetchRecipes")
+//console.log("inside fetchRecipes")
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/recipes')
             .then(response => response.json())

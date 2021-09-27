@@ -9,7 +9,8 @@ const RecipeShow = (props) => {
 
     //console.log(props)
     //let recipe = props.recipes[props.match.params.id - 1]
-    let recipe = props.recipes.filter(recipe => recipe.id == props.match.params.id)[0]
+    // + is same as parseInt, turnsit into integer
+    let recipe = props.recipes.filter(recipe => recipe.id === +props.match.params.id)[0]
     
     return (
         <div>
@@ -17,7 +18,7 @@ const RecipeShow = (props) => {
 
             <h2>{recipe ? recipe.name : null}</h2>
             <h4>{recipe ? recipe.description : null}</h4>
-            {recipe ? recipe.created_at : null}
+            {recipe ? recipe.formatted : null}
             <br></br><br></br>
             <IngredientsContainer recipe={recipe}/>
             <RecipeEdit recipe={recipe}/>

@@ -14,7 +14,7 @@ class RecipesContainer extends React.Component {
     }
     
     render(){
-        console.log(this.props.recipes, "hi")
+        //onsole.log(this.props.recipes, "hi")
         
         return(
             <div>

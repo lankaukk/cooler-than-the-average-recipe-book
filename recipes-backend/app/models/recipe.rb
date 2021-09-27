@@ -7,12 +7,7 @@ class Recipe < ApplicationRecord
         self.save
     end
 
-    def formatted(created_at)
-        attributes['created_at'].strftime("%b %d, %Y")
-        super.merge('created_at' => self.created_at.strftime("%d %b %Y"))
+    def formatted
+        self['created_at'].strftime("%b %d, %Y")
     end
-
-    def to_json(created_at)
-        super.merge('created_at' => self.created_at.strftime("%d %b %Y"))
-      end
 end

@@ -9,8 +9,8 @@ const RecipesList = (props) =>  {
     const handleDelete = (recipe) => {
         props.deleteRecipe(recipe.id)
         
-        const li = document.getElementById(`${recipe.id}`)
-        li.style.display = 'none'
+        // const li = document.getElementById(`${recipe.id}`)
+        // li.style.display = 'none'
       }
 
     return (
