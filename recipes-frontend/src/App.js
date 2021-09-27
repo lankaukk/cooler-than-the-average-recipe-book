@@ -1,7 +1,6 @@
 import React from 'react';
 import RecipesContainer from './containers/RecipesContainer';
 import NavBar from './components/NavBar';
-import RecipeInput from './components/RecipeInput';
 
 
 class App extends React.Component {

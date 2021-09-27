@@ -7,8 +7,7 @@ import IngredientsContainer from '../containers/IngredientsContainer';
 
 const RecipeShow = (props) => {
 
-    console.log(props)
-
+    //console.log(props)
     //let recipe = props.recipes[props.match.params.id - 1]
     let recipe = props.recipes.filter(recipe => recipe.id == props.match.params.id)[0]
     

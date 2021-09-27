@@ -12,8 +12,10 @@ li {
 
 a {
     text-decoration: none;
+    background-color: white;
     color: black;
     padding: 1%;
+    border-radius: 35%;
 }
 
 a:hover {

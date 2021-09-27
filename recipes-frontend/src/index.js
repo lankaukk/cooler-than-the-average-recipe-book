@@ -11,6 +11,7 @@ import App from './App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+//good to use redux thunk bc we can use action creators(seperation of concerns is good)
 const store = createStore(recipeReducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(

@@ -21,6 +21,9 @@ class Api::V1::RecipesController < ApplicationController
     def destroy
         @recipe = Recipe.find(params[:id])
         @recipe.destroy 
+        @recipes = Recipe.all
+        render json: @recipes
+        
     end
 
     def update
@@ -33,6 +36,6 @@ class Api::V1::RecipesController < ApplicationController
     private 
 
     def recipe_params
-        params.require(:recipe).permit(:name, :description, :ingredients, :date)
+        params.require(:recipe).permit(:name, :description, :ingredients, :created_at)
     end
 end
