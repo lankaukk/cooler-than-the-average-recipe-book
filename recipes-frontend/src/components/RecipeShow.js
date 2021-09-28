@@ -9,17 +9,18 @@ const RecipeShow = (props) => {
 
     //console.log(props)
     //let recipe = props.recipes[props.match.params.id - 1]
-    // + is same as parseInt, turnsit into integer
+    // + is same as parseInt, turns it into an integer
     let recipe = props.recipes.filter(recipe => recipe.id === +props.match.params.id)[0]
     
     return (
         <div>
             {recipe ? null : <Redirect to='/recipes'/>}
-
-            <h2>{recipe ? recipe.name : null}</h2>
-            <h4>{recipe ? recipe.description : null}</h4>
-            {recipe ? recipe.formatted : null}
-            <br></br><br></br>
+            <div className="recipe-card">
+                <h2>{recipe ? recipe.name : null}</h2>
+                <h4>{recipe ? recipe.description : null}</h4>
+                <h4>Added on {recipe ? recipe.formatted : null}</h4>
+            </div>
+            <br></br>
             <IngredientsContainer recipe={recipe}/>
             <RecipeEdit recipe={recipe}/>
         </div>

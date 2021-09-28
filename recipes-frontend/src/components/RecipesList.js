@@ -19,7 +19,7 @@ const RecipesList = (props) =>  {
             Recipes!
             <br></br>
             {props.recipes.map(recipe => 
-                <li key={recipe.id}  id={recipe.id}> 
+                <li key={recipe.id}  id={recipe.id} className="recipe-list-item"> 
                     <Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link> 
         
                     <button onClick={() => handleDelete(recipe)}>&times;</button>

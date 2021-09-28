@@ -1,6 +1,6 @@
 body {
     background-color: pink;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Koh Santepheap', Arial, Helvetica, sans-serif;
     font-weight: 700;
 
     padding: 5%;
@@ -8,14 +8,21 @@ body {
 
 li {
     padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
 }
 
 a {
     text-decoration: none;
     background-color: white;
     color: black;
-    padding: 1%;
-    border-radius: 35%;
+    
+    padding: 10px;
+    border-radius: 20px;
 }
 
 a:hover {
@@ -23,39 +30,68 @@ a:hover {
     color: white;
 }
 
+button {
+    margin-left: 8px;
+}
+
+.logo {
+    font-size: 60pt;
+    font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.other, .condiments, .seasoning, .fats, .protein, .grains, .vegetables, .dairy {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+}
+
 .dairy {
-    color: rgb(8, 91, 199);
+    background-color: rgb(8, 91, 199);
 }
 
 .fruits {
-    color: rgb(206, 4, 121);
+    background-color: rgb(206, 4, 121);
 }
 
 .vegetables {
-    color: rgb(47, 88, 6);
+    background-color: rgb(47, 88, 6);
 }
 
 .grains {
- color: rgb(116, 111, 47);
+    background-color: rgb(116, 111, 47);
 }
 
 .protein {
-    color: sienna;
+    background-color: sienna;
 }
 
 .fats {
-    color: slateblue;
+    background-color: slateblue;
 }
 
 .seasoning {
-    color: sandybrown;
+    background-color: sandybrown;
 }
 
 .condiments {
-    color: rgb(185, 109, 42);
+    background-color: rgb(185, 109, 42);
     -webkit-text-stroke: .5px sienna;
 }
 
 .other {
-    color: slategray;
+    background-color: slategray;
+}
+
+
+
+.recipe-card {
+    background-color: rgb(92, 14, 34);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+
+    margin-top: 20px;
+    
+    width: fit-content;
 }

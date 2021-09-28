@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Recipe Book</h1>
+        <div className="logo">Recipe Book</div>
         <NavBar/>
         <RecipesContainer/>
       </div>

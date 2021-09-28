@@ -7,8 +7,8 @@ export function fetchRecipes() {
                 type: 'FETCH_RECIPES',
                 payload: recipeData
             }))
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
     }
 }
-
-// something like this will actually be used
-// fetch('http://localhost:3000/api/v1/`${recipesID}`/7/ingredients')
