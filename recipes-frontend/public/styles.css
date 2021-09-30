@@ -40,7 +40,7 @@ button {
     margin-bottom: 20px;
 }
 
-.other, .condiments, .seasoning, .fats, .protein, .grains, .vegetables, .dairy {
+.other, .condiments, .seasoning, .fats, .protein, .grains, .vegetables, .fruits, .dairy {
     display: inline-block;
     margin-right: 10px;
     color: white;

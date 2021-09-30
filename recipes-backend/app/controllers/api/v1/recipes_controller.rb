@@ -22,8 +22,7 @@ class Api::V1::RecipesController < ApplicationController
         @recipe = Recipe.find(params[:id])
         @recipe.destroy 
         @recipes = Recipe.all
-        render json: @recipes
-        
+        render json: @recipes   
     end
 
     def update

@@ -30,25 +30,25 @@ class IngredientInput extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                 
-                <label>Add Ingredient: </label>
-                <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Ingredient Name" ></input>
-                
-                <select name="group" value={this.state.group} onChange={this.handleChange}>   
-                    <option value="none" disabled >
-                        Category
-                    </option>        
-                    <option value="dairy">dairy</option>
-                    <option value="fruits">fruits</option>
-                    <option value="vegetables">vegetables</option>
-                    <option value="grains">grains</option>
-                    <option value="protein">protein</option>
-                    <option value="fats">fats</option>
-                    <option value="seasoning">seasoning</option>
-                    <option value="condiments">condiments</option>
-                    <option value="other">other</option>
-                </select>
+                    <label>Add Ingredient: </label>
+                    <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Ingredient Name" ></input>
+                    
+                    <select name="group" value={this.state.group} onChange={this.handleChange}>   
+                        <option value="none" disabled >
+                            Category
+                        </option>        
+                        <option value="dairy">dairy</option>
+                        <option value="fruits">fruits</option>
+                        <option value="vegetables">vegetables</option>
+                        <option value="grains">grains</option>
+                        <option value="protein">protein</option>
+                        <option value="fats">fats</option>
+                        <option value="seasoning">seasoning</option>
+                        <option value="condiments">condiments</option>
+                        <option value="other">other</option>
+                    </select>
 
-                <input type="submit" value="Add" ></input>
+                    <input type="submit" value="Add" ></input>
 
                 </form>
                 

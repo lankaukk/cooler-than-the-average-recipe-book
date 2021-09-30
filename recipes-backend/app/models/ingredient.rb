@@ -4,3 +4,4 @@ class Ingredient < ApplicationRecord
 
     validates_inclusion_of :group, :in => ['dairy', 'fruits', 'vegetables', 'grains', 'protein', 'fats', 'seasoning', 'condiments', 'other']
 end
+
