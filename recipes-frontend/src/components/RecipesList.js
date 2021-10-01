@@ -16,8 +16,8 @@ const RecipesList = (props) =>  {
     return (
         <div>
             <br></br>
-            {props.recipes.length} Recipes!
-            <br></br>
+            <h2>{props.recipes.length} Recipes!</h2>
+            
             {props.recipes.map(recipe => 
                 <li key={recipe.id}  id={recipe.id} className="recipe-list-item"> 
                     <Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link> 
