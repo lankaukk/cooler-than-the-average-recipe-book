@@ -10,11 +10,12 @@ import RecipeShow from '../components/RecipeShow';
 class RecipesContainer extends React.Component {
 
     componentDidMount() {
+        // good lifecycle method to set up fetch() bc it is an async function
         this.props.fetchRecipes()
     }
     
     render(){
-        //onsole.log(this.props.recipes, "hi")
+        //console.log(this.props.recipes, "hi")
         
         return(
             <div>
@@ -44,5 +45,11 @@ const mapStateToProps = state => {
         recipes: state.recipes
     }
 }
+
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         fetchRecipes: () => dispatch(fetchRecipes())
+//     }
+// }
 
 export default connect(mapStateToProps, {fetchRecipes})(RecipesContainer);
