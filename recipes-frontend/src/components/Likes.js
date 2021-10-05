@@ -16,7 +16,7 @@ class Likes extends React.Component {
         return (
             <div>
                 <button onClick={this.incrementMe}>
-                    {this.state.count} Likes
+                    {this.state.count} Likes❤️
                 </button>
             </div>
         )
