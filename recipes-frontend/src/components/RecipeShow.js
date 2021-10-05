@@ -2,6 +2,7 @@
 import React from 'react';
 import { Redirect } from 'react-router';
 import RecipeEdit from './RecipeEdit';
+import Likes from './Likes';
 
 import IngredientsContainer from '../containers/IngredientsContainer';
 
@@ -19,6 +20,8 @@ const RecipeShow = (props) => {
                 <h2>{recipe ? recipe.name : null}</h2>
                 <h4>{recipe ? recipe.description : null}</h4>
                 <h4>Added on {recipe ? recipe.formatted : null}</h4>
+
+                <Likes/>
             </div>
             <br></br>
             <IngredientsContainer recipe={recipe}/>
