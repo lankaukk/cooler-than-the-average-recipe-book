@@ -21,7 +21,7 @@ const RecipeShow = (props) => {
                 <h4>{recipe ? recipe.description : null}</h4>
                 <h4>Added on {recipe ? recipe.formatted : null}</h4>
 
-                <Likes/>
+                {/* add Likes component here */}
             </div>
             <br></br>
             <IngredientsContainer recipe={recipe}/>
