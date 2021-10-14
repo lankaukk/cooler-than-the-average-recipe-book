@@ -5,6 +5,9 @@ Rails.application.routes.draw do
       # if i want an all ingredients show page do this:
       # (will also haveto update the ingredients index, and serializers to notrequire recipe_id)
       # resources :ingredients
+
+      resources :users, only: [:create, :show, :index]
+      
       resources :recipes do
         resources :ingredients
       end
