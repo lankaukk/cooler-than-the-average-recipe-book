@@ -9,8 +9,11 @@ Rails.application.routes.draw do
       post '/login',    to: 'sessions#create'
       post '/logout',   to: 'sessions#destroy'
       get '/logged_in', to: 'sessions#is_logged_in?'
+      
+      post "/signup", to: "users#create"
+      get "/me", to: "users#show"
 
-      resources :users, only: [:create, :show, :index]
+      # resources :users, only: [:create, :show, :index]
 
       resources :recipes do
         resources :ingredients
@@ -20,5 +23,3 @@ Rails.application.routes.draw do
   
   
 end
-
-# fetch(`http://localhost:3000/api/v1/recipes/1/ingredients`)

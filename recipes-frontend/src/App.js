@@ -7,6 +7,8 @@ import Home from './Home';
 
 import RecipesContainer from './containers/RecipesContainer';
 import NavBar from './components/NavBar';
+import RecipesList from './components/RecipesList';
+import RecipeInput from './components/RecipeInput';
 
 
 class App extends React.Component {
@@ -17,6 +19,10 @@ class App extends React.Component {
       user: {}
      };
   };
+
+  componentDidMount() {
+    this.loginStatus()
+  }
 
   handleLogin = (data) => {
     this.setState({
@@ -45,10 +51,6 @@ class App extends React.Component {
       .catch(error => console.log('api errors:', error))
   };
 
-  componentDidMount() {
-    this.loginStatus()
-  }
-
   render() {
     return (
       <div className="App">
@@ -56,12 +58,14 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path='/' component={Home}/>
-            <Route exact path='/login' component={Login}/>
-            <Route exact path='/signup' component={Signup}/>
+            <Route exact path='/login' component={Login}/><br></br>
+            <Route exact path='/signup' component={Signup}/><br></br>
+            <Route exact path='/recipes' component={RecipesList}/><br></br>
+            <Route exact path='/recipes/new' component={RecipeInput}/><br></br>
           </Switch>
         </BrowserRouter>
 
-        <NavBar/>
+        {/* <NavBar/> */}
         <RecipesContainer/>
       </div>
     );
